@@ -15,15 +15,28 @@
     {% endfor %}
     <form method="POST">
         {% csrf_token %}
-        <input type="text" name="nome" placeholder="Nome" required>
+         <input type="text" name="nome" placeholder="Nome" required>
         <input type="email" name="email" placeholder="E-mail" required>
-        <input type="password" name="senha" placeholder="Senha" required>
-        <input type="password" name="confirmar_senha" placeholder="Confirmar Senha" required>
+
+        <div class="password-container">
+            <input type="password" name="senha" id="senha" placeholder="Senha" required>
+            <button type="button" class="toggle-password" onclick="passwordVisibility('senha', 'toggleIcon1')">
+                <img id="toggleIcon1" src="{% static 'img/eye-close.svg' %}" alt="Mostrar senha">
+            </button>
+        </div>
+
+        <div class="password-container">
+            <input type="password" name="confirmar_senha" id="confirmar_senha" placeholder="Confirmar Senha" required>
+            <button type="button" class="toggle-password" onclick="passwordVisibility('confirmar_senha', 'toggleIcon2')">
+                <img id="toggleIcon2" src="{% static 'img/eye-close.svg' %}" alt="Mostrar senha">
+            </button>
+        </div>
         <button type="submit">Registrar</button>
     </form>
     <div class="link">
     <a href="{% url 'login' %}">Já tem conta? Faça login</a>
 </div>
     </div>
+    <script src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>
