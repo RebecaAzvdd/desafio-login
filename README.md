@@ -7,7 +7,7 @@
 
 ## Como rodar o projeto
 - Clonar Repositorio: git clone url do projeto
-- Caminho do diretorio: cd desafiologin
+- Caminho do diretorio: cd desafio-login
 - Ativar Ambiente Virtual: source venv/bin/activate
 - Rodar Projeto: ./venv/bin/python manage.py runserver
 
