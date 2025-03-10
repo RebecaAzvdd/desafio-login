@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users',
+    'rest_framework',
+    'api'
 ]
 
 MIDDLEWARE = [
@@ -73,6 +75,9 @@ WSGI_APPLICATION = 'desafiologin.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+
+import pymysql
+pymysql.install_as_MySQLdb()
 
 DATABASES = {
     'default': {
